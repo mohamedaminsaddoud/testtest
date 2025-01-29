@@ -3,7 +3,7 @@ name: example
 on: push
 
 jobs:
-    first_job:
+    build:
         runs-on: ubuntu-latest
         steps:
             - name:
@@ -12,5 +12,9 @@ jobs:
                 sudo apt-get install cowsay -y
             - name: Exucute Cowsay CMD
               run: cowsay -f dragon "Runn for cover, I am Dragon" >> dragon.txt
-            - name: show file
-              run: cat dragon.txt
+            
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - name: show file
+            run: cat dragon.txt
