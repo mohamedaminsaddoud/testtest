@@ -28,4 +28,4 @@ jobs:
               name: my-artifact
               path: dragon.txt
           - name: show file
-            run: ls dragon.txt
+            run: cat dragon.txt/dragon.txt
